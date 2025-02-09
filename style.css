@@ -1,0 +1,74 @@
+.container {
+    border: 2px solid black;
+    display: flex;
+    height: 80vh;
+
+    /* Justify content pehle dtermine karega flex direction then dekha ga main axis ko which is horizontally left to right. 
+    And cross axis main axis ke perpendicular hoti hai. */
+    /* There is no justify-items in flexbox! */
+    justify-content: center;
+
+    /* align items jb use hota hai jb content ke ya elements ki sirf aik line hoti hai aur elements doosri line mn nhi gye hote. */
+    align-items: center;
+
+    /* align content to center jb use hota h jb elements doosri ya usse zyada linon main jarhe hon. */
+    align-content: center;
+
+    /* Flex direction use hoti items ko kis order main lay kiya jaye! */
+    /* flex-direction: column; */
+    flex-direction: row;
+
+    /* Flex wrap use hota h for wrapping up elements take we overflow na karein container se aur container ke hi andar doosri line mn ajain. */
+    flex-wrap: wrap;
+
+    /* first ata h flex ko direction then ata hai flex ko kahan wrap karna h. */
+    flex-flow: row wrap;
+
+    /* It means ke horizontally aur vertically gap ajaye ga elements ke beech without margin! */
+    gap: 30px;
+    row-gap: 30px;
+    column-gap: 30px;
+
+    /* shorthand property for gap; */
+    /* pehle row then column (R,C) */
+    gap: 40px 10px;
+
+}
+
+.item {
+    height: 60px;
+    width: 60px;
+    background-color: yellowgreen;
+    border: 2px solid blue;
+    /* margin: 5px; */
+
+    /* Flex grow means ke flex container mn items sab equal width ki jagah legein: 
+    Default flex-grow 0 hota h. */
+    flex-grow: 1;
+}
+
+.item-1 {
+    /* Iska matlab ke ye element ab do elements ki jagah lega! */
+    flex-grow: 2;
+
+    /* flex shrink ka matlab ke ye item two times faster shrink hoga as compared to other elements. */
+    flex-shrink: 2;
+
+    /* align-self means ke sirf ye item align hojaye ga. */
+    align-self: flex-start;
+}
+
+/* Jitna zayada order, element utna baad mn aye ga. Jiska order kam, wo pehle aye ga.*/
+/* Order property sirf items ya elements pr lagti h, container pr nhi! */
+/* Default oder 0 hota h! */
+.order-1 {
+    order: 1;
+}
+
+.order-2 {
+    order: 2;
+}
+
+.order-3 {
+    order: 3;
+}
